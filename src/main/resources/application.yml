@@ -12,8 +12,6 @@ spring:
       hibernate:
         format_sql: true
         show_sql: true
-auth:
-  key: dcs54csdf8wefsf45232r!sd5af?dff8w7fw8efwefwef8
 bot:
   username: dr_xoshimov_bot
   token: 7620327974:AAGaPQzUlNizoXZTRkQA75i4jgLTa3_GFmI
