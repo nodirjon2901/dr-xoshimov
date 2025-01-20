@@ -20,7 +20,7 @@ public class CorsConfiguration implements Filter {
 
         response.setHeader("Access-Control-Allow-Origin", "*");
         response.setHeader("Access-Control-Allow-Methods", "POST, PUT, GET, OPTIONS, DELETE");
-        response.setHeader("Access-Control-Allow-Headers", "x-requested-with, x-auth-token, token");
+        response.setHeader("Access-Control-Allow-Headers", "x-requested-with, x-auth-token, token, " + AuthKeyCheckInterceptor.AUTH_KEY);
         response.setHeader("Access-Control-Max-Age", "3600");
         response.setHeader("Access-Control-Allow-Credentials", "true");
         if (!(request.getMethod().equalsIgnoreCase("OPTIONS"))) {
@@ -28,7 +28,7 @@ public class CorsConfiguration implements Filter {
         } else {
             response.setHeader("Access-Control-Allowed-Methods", "POST, GET, DELETE");
             response.setHeader("Access-Control-Max-Age", "3600");
-            response.setHeader("Access-Control-Allow-Headers", "authorization, content-type,x-auth-token, " + "access-control-request-headers, access-control-request-method, accept, origin, token, authorization, x-requested-with,Accountcode");
+            response.setHeader("Access-Control-Allow-Headers", "authorization, content-type,x-auth-token, " + "access-control-request-headers, access-control-request-method, accept, origin, token, authorization, x-requested-with,Accountcode, " + AuthKeyCheckInterceptor.AUTH_KEY);
 
             response.setStatus(HttpServletResponse.SC_OK);
         }
