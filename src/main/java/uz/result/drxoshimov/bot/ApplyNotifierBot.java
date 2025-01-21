@@ -110,6 +110,9 @@ public class ApplyNotifierBot extends TelegramWebhookBot {
         return switch (button) {
             case CALL -> "Phone icon (Header)";
             case VISIT -> "Number of visits";
+            case TELEGRAM -> "Telegram icon";
+            case FACEBOOK -> "Facebook icon";
+            case INSTAGRAMM -> "Instagram icon";
             default -> button.name();
         };
     }
