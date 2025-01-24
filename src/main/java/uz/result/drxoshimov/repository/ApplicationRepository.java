@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Repository
 public interface ApplicationRepository extends JpaRepository<Application, Long> {
 
-    @Query(value = "select count (*) from counter where created_date>=:startDate and created_date<=:endDate", nativeQuery = true)
+    @Query(value = "select count (*) from application where created_date>=:startDate and created_date<=:endDate", nativeQuery = true)
     Long countApplicationInPeriod(@Param("startDate") LocalDateTime startDate, @Param("endDate") LocalDateTime endDate);
 
 }
